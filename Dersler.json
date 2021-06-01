@@ -1,0 +1,46 @@
+{
+    "Dersler": [
+        {   "DersAdi":"TYT",
+            "id": 0,
+            "Ders": [
+                {
+                    "id": 1,
+                    "DersAdi":"Problemler",
+                    "complete":100,
+                    "icerik": [
+                        {
+                            "DersAdi":"Sayı ve Kesir Problemleri", 
+                                "id": 1,
+                                "complete":15
+                            
+                        },
+                        {
+                            "DersAdi": "Yaş Problemleri",
+                                "id": 2,
+                                "complete":88
+                            
+                        }
+                    ]
+                },
+                {   
+                    "id": 2,
+                    "DersAdi":"PKBO",
+                    "complete":50,
+                    "icerik": [
+                        {
+                            "DersAdi": "Fonskiyonlar",
+                            "id": 1,
+                            "complete":75
+                            },
+                        {
+                            "DersAdi": "Oran Orantı",
+                            "id": 1,
+                            "complete":25
+                        }
+                        
+                    ]
+                }
+            ]
+        }
+    ]
+}
