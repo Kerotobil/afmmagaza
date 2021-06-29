@@ -4,12 +4,13 @@ import Navbar from '../../../components/Navbar';
 import { useRouter } from 'next/router';
 import { useDers } from '../../../hooks/useDers';
 import axios from 'axios';
+import { useCategories } from '../../../hooks/useCategories';
 
 
 let response2;
 export default function Profil() {
     const { query: { uniteID, konuID } } = useRouter();
-    const { data, isLoading, isError, refetch } = useDers();
+    const { data, isLoading, isError, refetch } = useCategories();
 
 
     let urlProxy;
@@ -22,7 +23,7 @@ export default function Profil() {
 
 
     return (
-        <div>
+        <div className="theme-light">
             <Navbar />
             <div className="flex min-h-screen">
                 <div className="bg-blue-300 w-72">

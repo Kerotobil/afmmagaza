@@ -1,9 +1,11 @@
-import React from 'react';
+import React, {useEffect} from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query'
 import 'tailwindcss/tailwind.css'
 import { Hydrate } from 'react-query/hydration'
 import { ReactQueryDevtools } from 'react-query/devtools'
+import axios from 'axios';
 
+import { useStore } from '../hooks/useStore';
 
 
 function MyApp({ Component, pageProps }) {
@@ -12,10 +14,22 @@ function MyApp({ Component, pageProps }) {
     queryClientRef.current = new QueryClient()
   }
 
+  const ready = useStore(state => state.ready);
+  const boot = useStore(state => state.boot);
+
+  useEffect(() => {
+    if (process.browser) {
+      boot();
+    }
+  }, []);
+
   return(
   <QueryClientProvider client={queryClientRef.current}>
     <Hydrate state={pageProps.dehydratedState}>
-  <Component {...pageProps} />
+      {
+        process.browser && !ready && <div>'Yükleniyor...'</div>
+      }
+      <Component {...pageProps} />
   </Hydrate>
   <ReactQueryDevtools />
   </QueryClientProvider>

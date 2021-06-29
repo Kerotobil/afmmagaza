@@ -6,8 +6,6 @@ export const fetchData = async (uniteID:string, apiGet:string) => {
     return response.data;
 }
 
-export const useVideo = (uniteID:string, api:string) => {
-
-    return useQuery(['urun', uniteID, api],  () => fetchData(uniteID, api));
-
+export const useVideo = (uniteID:string, api:string) =>{
+    return useQuery(['urun', uniteID, api], () => fetchData(uniteID, api));
 }

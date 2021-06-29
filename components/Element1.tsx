@@ -1,12 +1,11 @@
 import React from 'react';
-import { render } from 'react-dom';
-
 
 let flexReverse:string = "flex-row";
 
 
 type Props = {
-    reverse: boolean
+    reverse: boolean,
+    imageURL:string,
 
 }
 
@@ -25,7 +24,7 @@ export default function Element1(props:Props) {
             <div className={`flex flex-col bg-white lg:justify-around ${flexReverse}`}>
 
                 <div className="my-auto">
-                    <img src="https://cdn.fs.teachablecdn.com/u7gEtDagSMOUGaQR7PYb" className="w-screen shadow-md" />
+                    <img src={props.imageURL} className="w-screen shadow-md" />
                 </div>
                 <div className="md:mt-8  xl:mt-12">
                     <div className="pt-8 md:pt-0 text-center">
