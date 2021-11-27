@@ -2,23 +2,9 @@ import React, { useCallback, useState } from "react";
 import NavbarList from "../NavbarList";
 import Link from "next/link";
 import Image from "next/image";
-import useToken2 from "../../hooks/useToken2";
-import { useAuth } from "../../hooks/useAuth";
-import { useUsers } from "../../hooks/useUsers";
-import { useStore } from "../../hooks/useStore";
 import Dropdown from "../Dropdown";
 
 export default function Navbar() {
-  const Profile = useStore((state) => state.profile);
-
-  const { token } = useToken2();
-  const { data, isStale, isSuccess } = useUsers(token);
-  const { data: auth } = useAuth();
-  //  console.log(data!=null);
-  // const logOut = () => {
-  //     localStorage.clear();
-  // },
-
   const [Modal, setModal] = useState(true);
   const modalToggle = useCallback(() => {
     setModal((_) => !_);
@@ -28,10 +14,6 @@ export default function Navbar() {
   // const logiToggle = useCallback((newToken) => {
   //     setLogi(newToken);
   // }, [Logi]);
-
-  function Logout() {
-    useStore.getState().logout();
-  }
 
   return (
     <div className="h-24 flex bg-gray-100 w-full border-b-2 border-pink-600 justify-around items-center item1">

@@ -1,5 +1,4 @@
 import React from "react";
-import { getStaticProps } from "../yedekID";
 
 type Props = {
   text: string;

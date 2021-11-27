@@ -1,7 +1,6 @@
 import React from "react";
 import { Disclosure } from "@headlessui/react";
 import { ChevronUpIcon } from "@heroicons/react/solid";
-import { getStaticProps } from "../yedekID";
 
 export default function DisclosureElement(props) {
   return (
