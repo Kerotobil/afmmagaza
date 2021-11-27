@@ -1,6 +1,6 @@
 import React from "react";
 import MyLessons from "../components/MyLessons";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/home/Navbar";
 import { useApp } from "../hooks/useApp";
 import { useCategories } from "../hooks/useCategories";
 

@@ -19,7 +19,7 @@ export default function Example(props: Prop) {
         {({ open }) => (
           <>
             <div>
-              <Menu.Button className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm pl-4 py-2 bg-transparent text-sm font-medium text-gray-100 hover:bg-gray-50 hover:text-gray-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500">
+              <Menu.Button className="inline-flex justify-center w-full rounded-md border border-gray-300 bg-white shadow-sm pl-4 py-2 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-gray-900 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-100 focus:ring-indigo-500">
                 {props.buttonTittle}
                 <svg
                   xmlns="http://www.w3.org/2000/svg"

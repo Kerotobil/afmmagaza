@@ -1,5 +1,5 @@
 import React, { useCallback, useEffect, useMemo, useState } from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/home/Navbar";
 import Banner2 from "../components/Banner2";
 import Slider from "../components/Slider";
 import Slider1 from "../components/Slider1";

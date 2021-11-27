@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from "react";
 
-import Navbar from "../components/Navbar";
+import Navbar from "../components/home/Navbar";
 import { useLoginMutation } from "../hooks/useAuth";
 
 import { useStore } from "../hooks/useStore";

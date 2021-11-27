@@ -1,5 +1,5 @@
 import React from "react";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/home/Navbar";
 import TutorialMenu from "../components/TutorialMenu";
 import { useVideo } from "../hooks/useVideo";
 import Content from "./../components/Content";

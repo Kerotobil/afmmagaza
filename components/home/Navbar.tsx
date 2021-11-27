@@ -1,13 +1,12 @@
 import React, { useCallback, useState } from "react";
-import NavbarList from "../components/NavbarList";
+import NavbarList from "../NavbarList";
 import Link from "next/link";
-import LoginDropdown from "../components/LoginDropdown";
-import useToken2 from "../hooks/useToken2";
-import { useAuth, useLoginMutation } from "../hooks/useAuth";
-import { useUsers } from "../hooks/useUsers";
-import { useStore } from "../hooks/useStore";
-import Dropdown from "../components/Dropdown";
-import Dropdown2 from "../components/Dropdown2";
+import Image from "next/image";
+import useToken2 from "../../hooks/useToken2";
+import { useAuth } from "../../hooks/useAuth";
+import { useUsers } from "../../hooks/useUsers";
+import { useStore } from "../../hooks/useStore";
+import Dropdown from "../Dropdown";
 
 export default function Navbar() {
   const Profile = useStore((state) => state.profile);
@@ -35,12 +34,13 @@ export default function Navbar() {
   }
 
   return (
-    <div className="h-24 flex bg-pink-700 w-full justify-around items-center item1">
-      <div className="w-80 md:w-72 lg:w-96 cursor-pointer">
+    <div className="h-24 flex bg-gray-100 w-full border-b-2 border-pink-600 justify-around items-center item1">
+      <div className="w-80 h-16 relative md:w-72 lg:w-96 cursor-pointer">
         <Link href="/">
-          <img
-            src="https://www.afmmagaza.com/resman/uploads/LOGO YATAYbeyaz yazı.png"
-            alt=""
+          <Image
+            src="/LOGO-yatay-kirmizi.png"
+            layout="fill"
+            objectFit="contain"
           />
         </Link>
       </div>
@@ -58,25 +58,7 @@ export default function Navbar() {
             <NavbarList title="Ders Paketleri" url="/Lesson" />
             <NavbarList title="Online Kurs" url="/TutorialLesson2" />
             <NavbarList title="Profil" url="/Profil" />
-            <Dropdown2
-              menuSubTittle={[
-                { subtitle: "TYT", path: "/Lesson" },
-                { subtitle: "KPSS", path: "/4" },
-                { subtitle: "DGS", path: "/4" },
-              ]}
-              buttonTittle={"Ders Paketleri"}
-            />
           </ul>
-
-          {Profile != null ? (
-            <div className="justify-self-end relative">
-              <button onClick={() => Logout()}>
-                <a className="text-lg text-gray-200 cursor-pointer hover:text-pink-200">{`Çıkış Yap`}</a>
-              </button>
-            </div>
-          ) : (
-            <LoginDropdown />
-          )}
         </div>
         <div className="lg:hidden">
           {Modal ? (

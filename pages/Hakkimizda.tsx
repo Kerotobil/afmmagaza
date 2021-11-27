@@ -1,6 +1,6 @@
 import React from "react";
 import TextArea from "../components/TextArea";
-import Navbar from "../components/Navbar";
+import Navbar from "../components/home/Navbar";
 
 export default function Hakkimizda() {
   return (

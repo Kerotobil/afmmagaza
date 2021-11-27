@@ -6,7 +6,7 @@ export default function ProdutInfo() {
       <div className="flex flex-col md:flex-row  mx-auto shadow-lg rounded-md bg-white">
         <div className="my-auto mx-auto">
           <img
-            src="https://www.afmmagaza.com/resman/uploads/Adsız tasarım (27).jpg"
+            src="https://www.afmmagaza.com/resman/uploads/site-gorsel/koz-banner10.jpg"
             alt=""
             className=" mx-auto w-full p-4 aspect-w-4 aspect-h-4"
           />

@@ -1,21 +1,21 @@
-import React, {useEffect} from 'react';
-import { QueryClient, QueryClientProvider } from 'react-query'
-import 'tailwindcss/tailwind.css'
-import { Hydrate } from 'react-query/hydration'
-import { ReactQueryDevtools } from 'react-query/devtools'
-import axios from 'axios';
+import React, { useEffect } from "react";
+import { QueryClient, QueryClientProvider } from "react-query";
+import { Hydrate } from "react-query/hydration";
+import "tailwindcss/tailwind.css";
 
-import { useStore } from '../hooks/useStore';
+import { ReactQueryDevtools } from "react-query/devtools";
+import axios from "axios";
 
+import { useStore } from "../hooks/useStore";
 
 function MyApp({ Component, pageProps }) {
-  const queryClientRef = React.useRef()
+  const queryClientRef = React.useRef();
   if (!queryClientRef.current) {
-    queryClientRef.current = new QueryClient()
+    queryClientRef.current = new QueryClient();
   }
 
-  const ready = useStore(state => state.ready);
-  const boot = useStore(state => state.boot);
+  const ready = useStore((state) => state.ready);
+  const boot = useStore((state) => state.boot);
 
   useEffect(() => {
     if (process.browser) {
@@ -23,17 +23,15 @@ function MyApp({ Component, pageProps }) {
     }
   }, []);
 
-  return(
-  <QueryClientProvider client={queryClientRef.current}>
-    <Hydrate state={pageProps.dehydratedState}>
-      {
-        process.browser && !ready && <div>'Yükleniyor...'</div>
-      }
-      <Component {...pageProps} />
-  </Hydrate>
-  <ReactQueryDevtools />
-  </QueryClientProvider>
-  )
+  return (
+    <QueryClientProvider client={queryClientRef.current}>
+      <Hydrate state={pageProps.dehydratedState}>
+        {process.browser && !ready && <div>'Yükleniyor...'</div>}
+        <Component {...pageProps} />
+      </Hydrate>
+      <ReactQueryDevtools />
+    </QueryClientProvider>
+  );
 }
 
-export default MyApp
+export default MyApp;

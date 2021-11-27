@@ -1,18 +1,14 @@
 import { useRouter } from "next/router";
 import React from "react";
-import { useCategory } from "../../hooks/useCategory";
-import Navbar from "../../components/Navbar";
-import { Disclosure } from "@headlessui/react";
+import Navbar from "../../components/home/Navbar";
 import SectionInfo from "../../components/SectionInfo";
-import { ChevronUpIcon } from "@heroicons/react/solid";
 import DisclosureElement from "../../components/Disclosure";
 import ProdutInfo from "../../components/ProdutInfo";
-import ProdutInfoDetails from "../../components/ProductInfoDetails";
 import Footer from "../../components/Footer";
 
 export default function Category() {
   const router = useRouter();
-  const category = useCategory(String(router.query.id));
+  //const category = useCategory(String(router.query.id));
 
   return (
     <div className="w-full bg-gray-100">
