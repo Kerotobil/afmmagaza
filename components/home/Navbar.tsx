@@ -10,14 +10,9 @@ export default function Navbar() {
     setModal((_) => !_);
   }, [Modal]);
 
-  // const [Logi, setLogi] = useState(token);
-  // const logiToggle = useCallback((newToken) => {
-  //     setLogi(newToken);
-  // }, [Logi]);
-
   return (
     <div className="h-24 flex bg-gray-100 w-full border-b-2 border-pink-600 justify-around items-center item1">
-      <div className="w-80 h-16 relative md:w-72 lg:w-96 cursor-pointer">
+      <div className="w-80 h-16 relative md:w-72 lg:w-96 cursor-pointer md:mr-72">
         <Link href="/">
           <Image
             src="/LOGO-yatay-kirmizi.png"
@@ -29,17 +24,7 @@ export default function Navbar() {
       <div>
         <div className="hidden lg:flex flex-row place-items-center">
           <ul className="hidden md:flex flex-row place-items-center">
-            <Dropdown
-              menuSubTittle={[
-                { subtitle: "TYT", path: "/Lesson" },
-                { subtitle: "KPSS", path: "/4" },
-                { subtitle: "DGS", path: "/4" },
-              ]}
-              buttonTittle={"Ders Paketleri"}
-            />
-            <NavbarList title="Ders Paketleri" url="/Lesson" />
-            <NavbarList title="Online Kurs" url="/TutorialLesson2" />
-            <NavbarList title="Profil" url="/Profil" />
+            <NavbarList title="Hakkımızda" url="/Hakkimizda" />
           </ul>
         </div>
         <div className="lg:hidden">
@@ -93,42 +78,12 @@ export default function Navbar() {
                   </div>
                 </div>
                 <div className="px-2 pt-2 pb-3 space-y-1">
-                  <a
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-900 hover:bg-gray-50"
-                  >
-                    Ders Paketleri
-                  </a>
-
-                  <a
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-900 hover:bg-gray-50"
-                  >
-                    Kitaplarımız
-                  </a>
-
-                  <a
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-900 hover:bg-gray-50"
-                  >
-                    Çözümler
-                  </a>
-
-                  <a
-                    href="#"
-                    className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-900 hover:bg-gray-50"
-                  >
-                    Hakkımızda
-                  </a>
+                  <Link href="/Hakkimizda">
+                    <a className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-900 hover:bg-gray-50">
+                      Hakkımızda
+                    </a>
+                  </Link>
                 </div>
-                <Link href="/Login">
-                  <a className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100">
-                    Giriş Yap
-                  </a>
-                </Link>
-                <a className="block w-full px-5 py-3 text-center font-medium text-indigo-600 bg-gray-50 hover:bg-gray-100">
-                  Kayıt Ol
-                </a>
               </div>
             </div>
           )}

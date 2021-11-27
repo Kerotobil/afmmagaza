@@ -20,15 +20,15 @@ export default function Banner2() {
               <div className="w-full md:w-1/2">
                 <a
                   className="whitespace-nowrap flex mx-3 justify-center items-center rounded-md shadow-lg font-semibold bg-pink-600 hover:bg-pink-500 text-lg text-white py-4 ml-3 border border-transparent md:py-4 md:text-lg md:px-10"
-                  href="#"
+                  href="https://www.kozserisi.com/p/sayilar-ardisik-sayilar-ve-oruntu-problemleri"
                 >
                   Ücretsiz Başla
                 </a>
               </div>
               <div className="w-full md:w-1/2">
-                <Link href="/">
+                <Link href="https://www.kozserisi.com/p/tyt-matematik-seti">
                   <a className="flex mx-3 justify-center items-center rounded-md shadow-md font-semibold bg-white text-lg text-pink-600 hover:bg-gray-50 py-4 ml-3 border border-transparent md:py-4 md:text-lg md:px-10">
-                    {"Giriş Yap"}
+                    {"Satın Al"}
                   </a>
                 </Link>
               </div>
@@ -36,9 +36,11 @@ export default function Banner2() {
             <div>
               <p className="text-black text-xl mr-1">
                 {"Denemek Mi İstiyorsun "}
-                <span className="text-indigo-600 text-xl hover:cursor-pointer font-semibold">
-                  Hemen İncele
-                </span>
+                <Link href="https://www.kozserisi.com/courses/sayilar-ardisik-sayilar-ve-oruntu-problemleri/lectures/32319280">
+                  <span className="text-indigo-600 text-xl hover:cursor-pointer font-semibold">
+                    Hemen İncele
+                  </span>
+                </Link>
               </p>
             </div>
           </div>
