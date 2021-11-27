@@ -25,6 +25,7 @@ export default function Navbar() {
         <div className="hidden lg:flex flex-row place-items-center">
           <ul className="hidden md:flex flex-row place-items-center">
             <NavbarList title="Hakkımızda" url="/Hakkimizda" />
+            <NavbarList title="İletişim" url="/iletisim" />
           </ul>
         </div>
         <div className="lg:hidden">
