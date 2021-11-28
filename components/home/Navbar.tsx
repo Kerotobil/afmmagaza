@@ -2,7 +2,6 @@ import React, { useCallback, useState } from "react";
 import NavbarList from "../NavbarList";
 import Link from "next/link";
 import Image from "next/image";
-import Dropdown from "../Dropdown";
 
 export default function Navbar() {
   const [Modal, setModal] = useState(true);
@@ -12,13 +11,17 @@ export default function Navbar() {
 
   return (
     <div className="h-24 flex bg-gray-100 w-full border-b-2 border-pink-600 justify-around items-center item1">
-      <div className="w-80 h-16 relative md:w-72 lg:w-96 cursor-pointer md:mr-72">
+      <div className="w-64 h-16 relative md:w-72 lg:w-96 cursor-pointer mr-36 md:mr-72">
         <Link href="/">
-          <Image
-            src="/LOGO-yatay-kirmizi.png"
-            layout="fill"
-            objectFit="contain"
-          />
+          <a>
+            <Image
+              src="/LOGO-yatay-kirmizi.png"
+              layout="fill"
+              objectFit="contain"
+              blurDataURL={"/LOGO-yatay-kirmizi.png"}
+              placeholder="blur"
+            />
+          </a>
         </Link>
       </div>
       <div>
@@ -33,7 +36,7 @@ export default function Navbar() {
             <button onClick={modalToggle}>
               <svg
                 xmlns="http://www.w3.org/2000/svg"
-                className="h-6 w-6"
+                className="h-6 w-6 "
                 fill="none"
                 viewBox="0 0 24 24"
                 stroke="currentColor"
@@ -47,8 +50,8 @@ export default function Navbar() {
               </svg>
             </button>
           ) : (
-            <div className="w-2/3 md:w-96 absolute top-0 z-20    p-2 transform right-0 lg:hidden ">
-              <div className="rounded-lg shadow-md bg-green-300 ring-1 ring-black ring-opacity-5 overflow-hidden">
+            <div className="w-2/3 md:w-96 absolute top-0 z-20 p-2 transform right-0 lg:hidden">
+              <div className="rounded-lg shadow-md bg-pink-800 ring-1 ring-black ring-opacity-5 overflow-hidden">
                 <div className="px-5 pt-4 flex items-center justify-between">
                   <div>
                     <img
@@ -62,7 +65,7 @@ export default function Navbar() {
                       <button onClick={modalToggle}>
                         <svg
                           xmlns="http://www.w3.org/2000/svg"
-                          className="h-6 w-6 "
+                          className="h-5 w-5 text-gray-200 "
                           fill="none"
                           viewBox="0 0 24 24"
                           stroke="currentColor"
@@ -82,6 +85,11 @@ export default function Navbar() {
                   <Link href="/Hakkimizda">
                     <a className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-900 hover:bg-gray-50">
                       Hakkımızda
+                    </a>
+                  </Link>
+                  <Link href="/iletisim">
+                    <a className="block px-3 py-2 rounded-md text-base font-medium text-white hover:text-gray-900 hover:bg-gray-50">
+                      İletişim
                     </a>
                   </Link>
                 </div>

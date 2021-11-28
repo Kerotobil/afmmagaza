@@ -12,11 +12,6 @@ export const HomeLayout: React.FC<Props> = (props) => {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
         <meta property="og:title" content="Akıl Fikir Mektebi" key="title" />
         <meta property="key" content="" />
-        <meta
-          property="keywords"
-          content="problemler, soru bankası, kitabı, video, ders, koz, tyt, kaf, raunt, , problemler, soru bankası, kitabı, video, ders, koz, tyt, kaf, raunt, ,KOZ Serisi TYT Problemler Video Ders Seti"
-        />
-        <meta name="keywords" property="tyt, ayt, soru bankası" />
       </Head>
       <div>
         <Navbar />

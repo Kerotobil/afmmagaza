@@ -48,7 +48,13 @@ export default function Banner2() {
 
         <div className="absolute transform z-20 scale-150 right-64 top-1/2 translate-x-1/2 xl:translate-x-1/5 -translate-y-1/2 h-0 md:h-full ">
           <div className="w-96 h-full relative">
-            <Image src="/koziconmocup.png" layout="fill" objectFit="contain" />
+            <Image
+              src="/koziconmocup.png"
+              layout="fill"
+              objectFit="contain"
+              placeholder="blur"
+              blurDataURL="/koziconmocup.png"
+            />
           </div>
         </div>
       </div>
